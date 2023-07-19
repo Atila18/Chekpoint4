@@ -1,0 +1,88 @@
+header.header-big-container {
+  background-color: black;
+}
+div.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  color: white;
+}
+a.search {
+  margin-bottom: 1%;
+  width: 30%;
+}
+#searchbar {
+  margin-top: 0.5%;
+  border: none;
+  font-size: 16pt;
+  color: white;
+  background-color: black;
+  max-height: 10vh;
+}
+.account {
+  margin-left: 40%;
+  width: 40px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.icone-burger {
+  color: white;
+  cursor: pointer;
+  margin-top: 1%;
+  margin-right: 3%;
+  max-height: 10vw;
+  max-width: 10vw;
+  font-size: 5vh;
+}
+.nav-menu {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  background-color: #25272c;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  right: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 8px 8px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.useraccountconnected {
+  display: flex;
+  flex-direction: row;
+}
