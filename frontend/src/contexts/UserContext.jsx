@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer } from "react";
 import PropTypes from "prop-types";
+import { createContext, useContext, useReducer } from "react";
 
 const UserContext = createContext();
 
@@ -23,7 +23,7 @@ UserContextProvider.propTypes = {
   initialState: PropTypes.shape({
     user: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      firstname: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
       role_id: PropTypes.number.isRequired,
     }),

@@ -29,10 +29,38 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const ItemManager = require("./ItemManager");
+const UserManager = require("./UserManager");
+const AuthorManager = require("./AuthorManager");
+const CategoryManager = require("./CategoryManager");
+const FavoriteManager = require("./FavoriteManager");
+const RoleManager = require("./RoleManager");
+const GenreManager = require("./GenreManager");
+const MangaManager = require("./MangaManager");
+const MangaGenreManager = require("./MangaGenreManager");
 
-models.item = new ItemManager();
-models.item.setDatabase(pool);
+models.user = new UserManager();
+models.user.setDatabase(pool);
+
+models.author = new AuthorManager();
+models.author.setDatabase(pool);
+
+models.categorie = new CategoryManager();
+models.categorie.setDatabase(pool);
+
+models.favorite = new FavoriteManager();
+models.favorite.setDatabase(pool);
+
+models.role = new RoleManager();
+models.role.setDatabase(pool);
+
+models.genre = new GenreManager();
+models.genre.setDatabase(pool);
+
+models.manga = new MangaManager();
+models.manga.setDatabase(pool);
+
+models.mangaGenre = new MangaGenreManager();
+models.mangaGenre.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model

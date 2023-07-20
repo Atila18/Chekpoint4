@@ -1,0 +1,94 @@
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+
+.login-form {
+  width: 30%;
+  background-color: #25272cc4;
+  padding: 2rem;
+}
+
+.title {
+  font-family: Bebas Neue;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+input.border[type="email"],
+input.border[type="password"] {
+  height: 25px;
+  border: 2px solid #25272c;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border: 5px double white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue";
+  background: none;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+.text {
+  font-size: 1rem;
+}
+.sign-up {
+  cursor: pointer;
+  padding: 2px;
+  border: 5px double white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Bebas Neue";
+  background: none;
+  color: white;
+  margin-left: 2%;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  input.border[type="email"],
+  input.border[type="password"] {
+    height: 35px;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .sign-up {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
+}
