@@ -51,9 +51,7 @@ function SignUp() {
         .then(() => {
           navigate(`/connexion`);
         })
-        .catch(() => {
-          res.status(404);
-        });
+        .catch((error) => console.error(error));
     }
   };
 
@@ -109,9 +107,7 @@ function SignUp() {
 
   return (
     <>
-      <div>
-        <Toaster position="bottom-center" />
-      </div>
+      <div>{/* <Toaster position="bottom-center" /> */}</div>
       <div className="app">
         <div className="login-form">
           <div className="title">S'inscrire</div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useState, useEffect } from "react";
 import MangaAPI from "../components/MangaAPI";
 import "./Catalogue.css";

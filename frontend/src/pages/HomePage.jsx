@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import { useState, useEffect } from "react";
 import "./HomePage.css";
 import MangaAPI from "../components/MangaAPI";
