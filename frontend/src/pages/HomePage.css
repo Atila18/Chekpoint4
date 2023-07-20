@@ -1,0 +1,360 @@
+.mangas {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+section.box-mangas {
+  width: 100%;
+  height: 10%;
+}
+div.bandeau-mangas {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #25272c;
+}
+div.container-mangas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section.box-anime {
+  width: 100%;
+  height: 10%;
+}
+div.bandeau-anime {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #25272c;
+}
+div.container-anime {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+img {
+  width: 200px;
+}
+h1.mangas-connus {
+  display: flex;
+  margin-left: 10%;
+  font-size: 2rem;
+  background-color: rgba(197, 196, 196, 0.527);
+  border-radius: 6px;
+  width: 35%;
+  text-align: center;
+  color: black;
+}
+.Titre {
+  display: flex;
+  width: 100%;
+  height: auto;
+  color: white;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+.Titre div {
+  display: flex;
+  width: 40%;
+  max-height: 200px;
+  flex-direction: column;
+  background-color: rgba(90, 90, 90, 0.281);
+  padding-bottom: 2%;
+  overflow-y: scroll;
+  border-radius: 20px;
+}
+.Titre .Hp {
+  display: flex;
+  justify-content: right;
+}
+.Titre div h2 {
+  margin-left: 2%;
+  font-size: 24px;
+  text-decoration: underline;
+}
+.Titre div p {
+  font-size: 20px;
+}
+.Titre .Hp h3 {
+  margin-right: 2%;
+  font-size: 24px;
+  text-align: right;
+  text-decoration: underline;
+}
+.Titre div p {
+  width: 70%;
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+h4 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: rgba(59, 59, 59, 0.568);
+  border-radius: 20px;
+  width: 18%;
+  height: 40px;
+  text-decoration: underline;
+}
+.Region {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  color: white;
+}
+.Region .Ga {
+  display: flex;
+  width: 70%;
+  height: auto;
+  color: white;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(32, 32, 32, 0.712);
+  margin-bottom: 4%;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.Region .Ga img {
+  transition: transform 0.1s;
+  border-radius: 20px;
+  width: 400px;
+}
+.Region .Ga img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  cursor: pointer;
+}
+.Region .Dr {
+  display: flex;
+  width: 70%;
+  height: auto;
+  color: white;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(32, 32, 32, 0.712);
+  margin-bottom: 4%;
+  flex-direction: row-reverse;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.Region .Dr img {
+  width: 400px;
+  transition: transform 0.1s;
+  border-radius: 20px;
+}
+.Region .Dr img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  cursor: pointer;
+}
+footer {
+  background-color: #060641;
+  color: aqua;
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.carousel {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 250px;
+  position: relative;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+#carousel__slide1 {
+  background-image: url(https://images.lanouvellerepublique.fr/image/upload/t_1020w/645514552c14e1f2158b45f8.jpg);
+  background-position-y: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#carousel__slide2 {
+  background-image: url(https://static1.millenium.org/articles/2/34/83/72/@/1178832-fairy-tail-koei-tecmo-videogioco-pdvg-article_cover_bd-1.jpg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#carousel__slide3 {
+  background-image: url(https://static.bandainamcoent.eu/high/jujutsu-kaisen/jujutsu-kaisen-cursed-clash/00-page-setup/JJK-header-mobile2.jpg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#carousel__slide4 {
+  background-image: url(https://cdn-uploads.gameblog.fr/img/news/429603_64a27d068bae6.jpeg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel__slide:nth-child(even) {
+  background-color: #99f;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
