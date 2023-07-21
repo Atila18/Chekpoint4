@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useUserContext } from "../contexts/UserContext";
 import "./Header.css";
+import PrivateLink from "./PrivateLink";
 
 export default function Header() {
   const [searchValue, setSearchValue] = useState("");
@@ -31,6 +32,16 @@ export default function Header() {
         <li className="nav-text">
           <Link to="/catalogue">Catalogue</Link>
         </li>
+        {user ? (
+          <>
+            <PrivateLink
+              to={`/utilisateur/${user.id}`}
+              text="Mon compte"
+              authorizedRoles={[1, 2]}
+            />
+            <PrivateLink to="/admin" text="Admin" authorizedRoles={[1]} />
+          </>
+        ) : null}
         {!user ? (
           <li className="nav-text">
             <Link to="/connexion">Connexion</Link>

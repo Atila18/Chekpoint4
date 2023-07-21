@@ -1,20 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import "./SignUp.css";
+import "./SignUp.css";
 
 function SignUp() {
   const navigate = useNavigate();
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleChangeFirstName = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const handleChangeLastName = (e) => {
-    setLastName(e.target.value);
+    setName(e.target.value);
   };
 
   const handleChangeEmail = (e) => {
@@ -28,7 +23,7 @@ function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!firstname || !lastname || !email || !password) {
+    if (!name || !email || !password) {
       //   toast.alert(
       //     "Vous devez fournir un nom, un prénom, un mail et un mot de passe"
       //   );
@@ -40,14 +35,12 @@ function SignUp() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          firstname,
-          lastname,
+          name,
           email,
           password,
           role_id: 2,
         }),
       })
-        .then((res) => res.json())
         .then(() => {
           navigate(`/connexion`);
         })
@@ -57,7 +50,7 @@ function SignUp() {
 
   const renderForm = (
     <div className="form">
-      <form onSubmit={handleSubmit}>
+      <form className="new-user" onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="firstname">Prénom</label>
           <input
@@ -66,16 +59,6 @@ function SignUp() {
             name="firstname"
             required
             onChange={handleChangeFirstName}
-          />
-        </div>
-        <div className="input-container">
-          <label htmlFor="lastname">Nom </label>
-          <input
-            className="border2"
-            type="text"
-            name="lastname"
-            required
-            onChange={handleChangeLastName}
           />
         </div>
         <div className="input-container">

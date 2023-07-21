@@ -103,7 +103,7 @@ export default function HomePage() {
         <div className="bandeau-mangas">
           <div className="container-mangas">
             {mangaList
-              .filter((item) => item.categorie_name === "Manga")
+              .filter((item) => item.categorieName === "Manga")
               .map((manga) => (
                 <MangaAPI {...manga} key={`manga-${manga.id}`} />
               ))}
@@ -115,7 +115,7 @@ export default function HomePage() {
         <div className="bandeau-anime">
           <div className="container-anime">
             {mangaList
-              .filter((item) => item.categorie_name === "Anime")
+              .filter((item) => item.categorieName === "Anime")
               .map((manga) => (
                 <MangaAPI {...manga} key={`manga-${manga.id}`} />
               ))}

@@ -11,7 +11,7 @@ export default function Catalogue() {
     window.location.hash = "#top";
   };
 
-  const getArts = () => {
+  const getMangas = () => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/api/mangas`, {
       credentials: "include",
       headers: {
@@ -24,7 +24,7 @@ export default function Catalogue() {
   };
 
   useEffect(() => {
-    getArts();
+    getMangas();
   }, []);
 
   const handleCatChange = (e) => {
@@ -55,7 +55,7 @@ export default function Catalogue() {
               <MangaAPI {...manga} key={`manga-${manga.id}`} />
             ))
           : mangaList
-              .filter((manga) => manga.categorie_name === currentCat)
+              .filter((manga) => manga.categorieName === currentCat)
               .map((manga) => (
                 <MangaAPI {...manga} key={`manga-${manga.id}`} />
               ))}

@@ -28,14 +28,30 @@ class MangaManager extends AbstractManager {
       manga_name =?,
       synopsis = ?,
       rating = ?,
+      day = ?,
+      month = ?,
+      year = ?,
+      author_id = ?,
+      categorie_id = ?
       where id = ?`,
-      [manga.image, manga.manga_name, manga.synopsis, manga.rating, manga.id]
+      [
+        manga.image,
+        manga.manga_name,
+        manga.synopsis,
+        manga.rating,
+        manga.day,
+        manga.month,
+        manga.year,
+        manga.author_id,
+        manga.categorie_id,
+        manga.id,
+      ]
     );
   }
 
   findAll() {
     return this.database.query(
-      `SELECT manga.id, manga.image, manga.manga_name AS mangaName, manga.day, manga.month, manga.year, manga.synopsis, c.categorie_name, a.firstname, a.lastname FROM ${this.table} JOIN categorie AS c ON c.id = manga.categorie_id JOIN author AS a ON a.id = manga.author_id`
+      `SELECT manga.id, manga.image, manga.manga_name AS mangaName, manga.day, manga.month, manga.year, manga.synopsis, c.categorie_name AS categorieName, a.firstname, a.lastname FROM ${this.table} JOIN categorie AS c ON c.id = manga.categorie_id JOIN author AS a ON a.id = manga.author_id`
     );
   }
 }

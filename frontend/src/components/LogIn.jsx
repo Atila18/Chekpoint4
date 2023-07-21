@@ -48,21 +48,21 @@ function LogIn() {
   };
   const renderForm = (
     <div className="form">
-      <form onSubmit={handleSubmit}>
+      <form className="form-user" onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="email"> Email </label>
           <input
-            className="border"
+            className="border-user"
             type="email"
             name="email"
             required
             onChange={handleChangeEmail}
           />
         </div>
-        <div className="input-container">
+        <div className="input-containe">
           <label htmlFor="password"> Mot de passe </label>
           <input
-            className="border"
+            className="border-user"
             type="password"
             name="pass"
             required
@@ -89,7 +89,6 @@ function LogIn() {
           <div className="title"> Connexion </div>
           {renderForm}
         </div>
-        <div className="hexagone" />
       </div>
     </>
   );
