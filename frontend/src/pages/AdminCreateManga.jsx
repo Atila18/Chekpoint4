@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./adminCreateManga.css";
 
 export default function AdminCreateManga() {
@@ -199,11 +199,11 @@ export default function AdminCreateManga() {
   return (
     <>
       <div> </div>
-      <div className="form-container">
-        <h2 className="create-art">Enregistrer un nouveau manga</h2>
+      <div className="form-container-manga">
+        <h2 className="create-manga">Enregistrer un nouveau manga</h2>
         <p className="required-fields">* : champs obligatoires</p>
         <section className="form">
-          <form onSubmit={handleSubmit}>
+          <form className="form-manga" onSubmit={handleSubmit}>
             <p>
               Manga Name <strong>*</strong>
             </p>
@@ -242,7 +242,11 @@ export default function AdminCreateManga() {
               Auteur <strong>*</strong>
             </p>
             <label htmlFor="authorId" className="label-with-link-to-add-data">
-              <select name="authorId" onChange={handleChangeAuthorId}>
+              <select
+                className="select-author"
+                name="authorId"
+                onChange={handleChangeAuthorId}
+              >
                 <option value="">Veuillez sélectionner un auteur</option>
                 {authors.map((author) => (
                   <option value={author.id} key={author.id}>
@@ -250,11 +254,11 @@ export default function AdminCreateManga() {
                   </option>
                 ))}
               </select>
-              <div className="to-add-data">
+              {/* <div className="to-add-data">
                 <Link to="/admin-create-author" className="to-add-data">
                   +
                 </Link>
-              </div>
+              </div> */}
             </label>
             <p>
               Image <strong>*</strong>
@@ -264,7 +268,11 @@ export default function AdminCreateManga() {
             </label>
             <p>Date de réalisation</p>
             <label htmlFor="creationDate" className="date-label">
-              <select name="day" onChange={handleChangeDay}>
+              <select
+                className="create-manga"
+                name="day"
+                onChange={handleChangeDay}
+              >
                 <option value="">Jour</option>
                 {allDays.map((daySelected) => (
                   <option value={daySelected} key={daySelected}>
@@ -272,7 +280,11 @@ export default function AdminCreateManga() {
                   </option>
                 ))}
               </select>
-              <select name="month" onChange={handleChangeMonth}>
+              <select
+                className="create-manga"
+                name="month"
+                onChange={handleChangeMonth}
+              >
                 <option value="">Mois</option>
                 {allMonths.map((monthSelected) => (
                   <option
@@ -283,7 +295,11 @@ export default function AdminCreateManga() {
                   </option>
                 ))}
               </select>
-              <select name="year" onChange={handleChangeYear}>
+              <select
+                className="create-manga"
+                name="year"
+                onChange={handleChangeYear}
+              >
                 <option value="">Année *</option>
                 {allYears.map((yearSelected) => (
                   <option value={yearSelected} key={yearSelected}>
@@ -296,7 +312,11 @@ export default function AdminCreateManga() {
               Catégorie <strong>*</strong>
             </p>
             <label htmlFor="categoryId" className="label-with-link-to-add-data">
-              <select name="categoryId" onChange={handleChangeCategorieId}>
+              <select
+                className="select-categorie"
+                name="categoryId"
+                onChange={handleChangeCategorieId}
+              >
                 <option value="">Veuillez sélectionner une catégorie</option>
                 {categories.map((categorie) => (
                   <option value={categorie.id} key={categorie.id}>
@@ -304,11 +324,11 @@ export default function AdminCreateManga() {
                   </option>
                 ))}
               </select>
-              <div className="to-add-data">
+              {/* <div className="to-add-data">
                 <Link to="/admin-create-category" className="to-add-data">
                   +
                 </Link>
-              </div>
+              </div> */}
             </label>
             <button type="submit">Enregistrer le manga</button>
           </form>
