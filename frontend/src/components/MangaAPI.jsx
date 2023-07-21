@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import PrivatePartForGallery from "./PrivatePartForGallery";
 
 export default function MangaAPI({ id, mangaName, image }) {
   return (
@@ -7,7 +8,13 @@ export default function MangaAPI({ id, mangaName, image }) {
       <div>
         <figure className="visage">
           <div className="image-container">
-            <img src={image} alt={mangaName} />
+            <PrivatePartForGallery authorizedRoles={[1]} mangaId={id} />
+            <div className="image-container">
+              <img
+                src={`${import.meta.env.VITE_ASSETS_IMAGES_URL}/${image}`}
+                alt={mangaName}
+              />
+            </div>
           </div>
           <figcaption className={!mangaName ? "only-link" : ""}>
             {mangaName}

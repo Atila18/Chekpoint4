@@ -1,0 +1,90 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modification {
+  padding: 2px;
+  margin-bottom: 30px;
+  border: 5px double white;
+  text-decoration: none;
+  font-size: 21px;
+  font-family: "Bebas Neue";
+  background: none;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+hr {
+  width: 80%;
+  height: 2px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 2em;
+  font-size: x-large;
+}
+
+.figure {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+.iconGalleryPage {
+  font-size: 25px;
+  height: 20px;
+  width: 20px;
+  margin-top: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a.icon-gallery-page {
+  margin-top: -8px;
+  margin-right: 8px;
+  color: #bc7c61;
+}
+.postCardTooltip {
+  font-size: 24px;
+  background-color: black;
+}
+
+.imgWithShadow {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .span {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .figure {
+    display: flex;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}

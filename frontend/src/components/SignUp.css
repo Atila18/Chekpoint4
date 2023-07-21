@@ -1,5 +1,4 @@
 .app {
-  font-family: sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +12,7 @@
   background-color: #25272cc4;
   padding: 2rem;
 }
-form.form-user {
+form.new-user {
   display: flex;
   flex-direction: column;
 }
@@ -22,13 +21,12 @@ form.form-user {
   font-size: 25px;
   margin-bottom: 20px;
 }
-label {
-  color: white;
-}
-input.border-user[type="email"],
-input.border-user[type="password"] {
+
+input.border2[type="email"],
+input.border2[type="password"],
+input.border2[type="text"] {
   width: 90%;
-  height: 25px;
+  height: 30px;
   border: 2px solid white;
 }
 
@@ -49,19 +47,23 @@ button[type="submit"] {
   justify-content: center;
 }
 
+.list-container {
+  display: flex;
+}
+
 .error {
   color: red;
   font-size: 12px;
 }
 
 .input-container {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin: 10px;
 }
-p.text {
-  color: white;
+.text {
   font-size: 1rem;
 }
 .sign-up {
