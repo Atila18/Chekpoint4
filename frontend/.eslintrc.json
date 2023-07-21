@@ -33,6 +33,7 @@
       {
         "assert": "either"
       }
-    ]
+    ],
+    "no-restricted-globals": "warn"
   }
 }

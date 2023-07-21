@@ -1,0 +1,61 @@
+.icon-gallery-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 20px;
+  margin-bottom: 0.25rem;
+}
+button.icon-gallery-page {
+  font-size: 25px;
+  height: 100%;
+  width: 30px;
+  margin-top: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon-gallery-page:hover {
+  scale: 1.4;
+}
+a.icon-gallery-page {
+  margin-top: -8px;
+  margin-right: 8px;
+  color: white;
+}
+
+div.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #25272c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.CatégorieContainer {
+  width: 90%;
+  background-color: #25272c;
+  margin-top: 2%;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+select {
+  font-size: 1rem;
+  width: 10%;
+}
+.scroll_to_top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  border-radius: 50%;
+  background-color: #25272c;
+  color: white;
+  border: rgb(255, 255, 255) 2px solid;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
